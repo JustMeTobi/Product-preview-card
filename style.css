@@ -1,0 +1,159 @@
+/* ---- Colors */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+}
+
+/* ---- The whole site */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--cream) ;
+    font-family: 'Montserrat', serif;
+}
+
+/* ---- Bigbox  */
+
+.bigBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    height: 450px;
+}
+
+/* ---- Left side box aka image box*/
+.leftBox {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.imgDesk {
+    width: 300px;
+}
+
+.imgMobile {
+    display: none;
+}
+
+/* ---- Right side box aka text */
+
+.rightBox {
+    background: var(--white);
+    width: 230px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--darkGrayishBlue);
+}
+
+p {
+    font-size: 14px;
+    font-weight:500;
+}
+
+h1 {
+    font-family: 'Fraunces', sans-serif;
+    color: var(--veryDarkBlue);
+
+}
+
+h2{
+    font-weight:700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price h1 {
+    color: var(--darkCyan);
+}
+
+h3 {
+    padding-left: 20px;
+    color: var(--darkGrayishBlue);
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.cartButton {
+    background: var(--darkCyan);
+    color: var(--white);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.cartButton img {
+    margin-right: 10px;
+}
+
+/* ---- Text under card */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* --- Media Qurry */
+
+@media screen and (max-width: 375px) {
+    .bigBox {
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .rightBox {
+        width: 295px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        height: 300px;
+    }
+
+    .leftBox {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        
+    }
+    
+    .imgDesk {
+        display: none;
+    }
+    
+    .imgMobile {
+        display: block;
+        width: 345px;        
+    }
+}
